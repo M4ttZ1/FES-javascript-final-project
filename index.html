@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Z Movies</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <h1>Z <span class="blue">Movies</span></h1>
+      </div>
+    </nav>
+
+
+    <div class="search__container">
+      <div class="search__element">
+        <h3 class="search__movie">Search Movie:</h3>
+        <input
+          type="text"
+          class="form__control"
+          placeholder="Search Movie Title ..."
+          id="movie__search--box"
+          onkeyup="findMovies()"
+        />
+      </div>
+    </div>
+
+    <div class="container display__none" >
+        <div class="row">
+          <div class="user-list" onclick="loadMovieDetails()">
+            <div class="user">
+              <div class="user-card">
+                <div class="user-card__container ">
+                  <i class="fas fa-spinner card__loading--spinner"></i>
+                    
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </body>
+</html>

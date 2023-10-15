@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body{
+    color: white;
+    background-color: black;
+}
+
+p{
+    font-size: 12px;
+}
+
+h3{
+    font-size: 14px;
+    color: white;
+}
+
+img{
+    height: 350px;
+}
+
+
+/* nav */
+
+nav{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blue{
+    color: aqua;
+}
+
+/* search bar */
+
+.search__container{
+    max-width: 800px;
+    height: 200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search__element{
+    width: 100%;
+    display: flex;
+}
+
+.search__movie{
+    width: 50%;
+    font-size: 36px;
+}
+
+.form__control{
+    width: 100%;
+}
+
+/* Card */
+
+.container {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    max-width: 1600px;
+}
+
+.user-list{
+    width: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.user-card {
+    width: calc(100%/5);
+    display: flex;
+}
+
+ .user-card__container{
+    width: 100%;
+    height: 50vh;
+    padding: 2px 16px;
+}
+
+.user-card__pic{
+    transition: all 300ms;
+    width: 100%;
+    cursor:not-allowed;
+}
+
+.user-card__pic:hover{
+    height: 71%;
+    width: 95%
+}
+
+
+
+/* LOADING STATE */
+
+.card__loading--spinner{
+    display: none !important;
+}
+
+.card__loading .card__loading--spinner{
+    display: block !important;
+}
+
+.card__loading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    color: aqua;
+}
+
+.fa-spinner{
+    animation: rotate 600ms infinite linear;
+}
+
+.display__none{
+    display: none;
+}
+
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+
+/* MEDIA QUERIES */
+
+
+@media(max-width: 1024px){
+    .user-card {
+        width: calc(100%/3);
+        display: flex;
+    }
+    .user-list{
+        width: auto;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media(max-width: 768px){
+    .search__container{
+        max-width: 400px;
+        height: 200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .search__element{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .form__control{
+        width: 120%;
+        height: 70px;
+    }
+
+    .search__movie{
+        height: 50px;
+        font-size: 16px;
+    }
+    .user-card {
+        width: calc(100%/2);
+        display: flex;
+    }
+}
